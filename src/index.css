@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-bg: #0A0A0A;
+  --color-ink: #E0D8D0;
+  --color-accent: #C5A059;
+  --color-card: #161616;
+  --color-sidebar: #111111;
+  --color-border: rgba(224, 216, 208, 0.1);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+  }
+  .book-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
